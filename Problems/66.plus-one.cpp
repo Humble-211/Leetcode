@@ -67,7 +67,26 @@
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
-        
+        vector<int> temp;
+        unsigned long long temp1 = 0 ;
+
+        for (int i =0 ; i <digits.size();i++) {
+            temp1 = temp1 * 10 + digits[i];
+        }
+        temp1+=1;
+        //temp1 = 124
+
+
+
+        //insert to temp[0] with last digit of temp1
+        while (temp1>0) {
+            temp.insert(temp.begin(),temp1%10);
+            temp1=temp1/10;
+        }
+        //this one is having problems because of the 0 (zeros).
+
+
+        return temp;
     }
 };
 // @lc code=end
