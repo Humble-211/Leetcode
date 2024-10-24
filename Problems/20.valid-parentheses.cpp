@@ -106,6 +106,7 @@ public:
         */
        // ^ this method wont work if s = "([)]"...
        // isValid(s) should return false
+       
         if (s.length() <2)
             return ret;
         int mid = s.length()/2;
